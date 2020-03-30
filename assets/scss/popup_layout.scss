@@ -1,0 +1,54 @@
+.container { 
+	display: none /* container with overlay and popup ocurrs after 2 sec. */
+}
+.overlay {
+	@extend %flex;
+    justify-content: center;
+	background: rgba(0, 0, 0, 0.6);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	transition: all .6s ease-in-out;
+	width: 100%;
+	z-index: 999;
+}
+.popup {
+	background: #fff;
+	border-top: $primary-color solid 6px;
+	width: 923px;
+	height: 402px;
+	margin: 0 auto;
+	position: absolute;
+	top: 28%;
+	#close {
+		font-size: 23px;
+		position: absolute;
+		top: 12px;
+		right: 20px;
+	}
+
+	/* As there is no href to avoid the hash being added to the URL when clicked we add a pointer */
+	#close:hover {
+		cursor: pointer;
+	}
+}
+
+/* RWD */
+@media screen and (max-width: 1200px){
+	.popup {
+		min-height: 580px;
+		top: 5%;
+		width: 70%;
+		#close {
+		font-size: 20px;
+		top: 5px;
+		right: 15px;
+	}
+  }
+}
+@media screen and (max-width: 480px){
+	.popup {
+		width: 95%;
+  }
+}

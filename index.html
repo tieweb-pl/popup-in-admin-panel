@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Popup API project</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/css/main.css" type="text/css" media='all' />
+		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script src="assets/js/app.js"></script>
+	</head>
+	
+	<body>
+		<div class="bg">
+			<img class="cross-line" src="assets/img/background.jpg" alt="background" />
+		</div>
+		<!-- button that shows popup -->
+		<div class="button-conteiner">
+			<button class="show-popup">show popup again</button>
+		</div>
+		<!-- popup with overlay and container -->
+		<div class="container">
+			<div class="overlay">
+				<div class="popup api-progress">
+					<a id="close" aria-hidden="true">&#x2715;</a>
+					<div class="api-item img">
+						<img src="assets/img/logos.png" alt="logos" />
+						<img class="cross-line" src="assets/img/red-cross.png" alt="not avaible" />
+					</div>
+					<div class="api-item txt">
+						<h2>API in progress</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:</p>
+						<ul>
+							<li>Lorem</li>
+							<li>Ipsum</li>
+							<li>dolor</li>
+						</ul>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <a href="#">ut aliquip</a>.</p>
+					</div>			
+				</div>	
+			</div>
+		</div>
+		<div>© Tomasz Mitał, all rights reserved</div>
+	</body>
+</html>

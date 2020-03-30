@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Avignon;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts//Avignon-Book3.eot);
+  /* IE */
+  src: url(../fonts/Avignon-Book3.eot?#iefix) format("embedded-opentype"), url(../fonts/Avignon-Book3.woff) format("woff"), url(../fonts/Avignon-Book3.ttf) format("truetype"), url(../fonts/Avignon-Book3.svg#Avignon-Book3) format("svg"); }
+@font-face {
+  font-family: AvignonDemi;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/avignondemi.eot);
+  src: url(../fonts/avignondemi.eot?#iefix) format("embedded-opentype"), url(../fonts/avignondemi.woff) format("woff"), url(../fonts/avignondemi.ttf) format("truetype"), url(../fonts/avignondemi.svg#avignondemi) format("svg"); }
+.button-conteiner, .overlay, .popup.api-progress {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+html,
+body {
+  font-family: Avignon, sans-serif;
+  margin: 0; }
+
+.bg {
+  min-height: 1080px;
+  width: 100%; }
+  .bg img {
+    height: auto;
+    width: 100%; }
+
+.button-conteiner {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+button.show-popup {
+  background-color: #98c246;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  /* button occurs after cosing popup */
+  padding: 6px 20px;
+  position: absolute;
+  top: 50%;
+  text-transform: uppercase; }
+  button.show-popup:hover {
+    background-color: #b3d66f; }
+
+/* popup */
+/* import general popup layout */
+.container {
+  display: none; }
+
+.overlay {
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all .6s ease-in-out;
+  width: 100%;
+  z-index: 999; }
+
+.popup {
+  background: #fff;
+  border-top: #000 solid 6px;
+  width: 923px;
+  height: 402px;
+  margin: 0 auto;
+  position: absolute;
+  top: 28%;
+  /* As there is no href to avoid the hash being added to the URL when clicked we add a pointer */ }
+  .popup #close {
+    font-size: 23px;
+    position: absolute;
+    top: 12px;
+    right: 20px; }
+  .popup #close:hover {
+    cursor: pointer; }
+
+/* RWD */
+@media screen and (max-width: 1200px) {
+  .popup {
+    min-height: 580px;
+    top: 5%;
+    width: 70%; }
+    .popup #close {
+      font-size: 20px;
+      top: 5px;
+      right: 15px; } }
+@media screen and (max-width: 480px) {
+  .popup {
+    width: 95%; } }
+.popup.api-progress {
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row; }
+  .popup.api-progress .api-item {
+    flex: 6 0;
+    margin: 4% 0; }
+    .popup.api-progress .api-item:nth-child(2) {
+      text-align: center; }
+  .popup.api-progress img {
+    margin: 70px 0 0 20px;
+    height: 180px;
+    width: auto; }
+  .popup.api-progress img.cross-line {
+    height: 220px;
+    position: relative;
+    left: 5px;
+    top: -275px; }
+  .popup.api-progress .txt {
+    font-family: Avignon, sans-serif;
+    font-size: 16px;
+    font-weight: 600; }
+    .popup.api-progress .txt h2 {
+      font-family: AvignonDemi, sans-serif;
+      font-size: 32px; }
+    .popup.api-progress .txt ul {
+      padding-inline-start: 0; }
+    .popup.api-progress .txt li {
+      list-style: none; }
+      .popup.api-progress .txt li:before {
+        content: "•";
+        font-size: 15px;
+        vertical-align: top;
+        padding-right: 5px;
+        line-height: 20px; }
+    .popup.api-progress .txt p {
+      margin-right: 19%; }
+    .popup.api-progress .txt a {
+      color: #000; }
+      .popup.api-progress .txt a:hover {
+        color: #555; }
+
+@supports (-ms-ime-align: auto) {
+  /* Edge does not support padding-inline-start*/
+  .popup.api-progress .txt ul {
+    position: relative;
+    left: -20px; } }
+/* RWD */
+@media screen and (max-width: 1200px) {
+  .popup.api-progress {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 10px; }
+    .popup.api-progress .api-item {
+      flex: 12 0;
+      margin: 10px 0; }
+    .popup.api-progress .api-item.img {
+      margin: 0 auto;
+      /* center on RWD */
+      width: 320px;
+      /* same as above */
+      order: 2; }
+      .popup.api-progress .api-item.img img {
+        margin: 30px 0; }
+    .popup.api-progress .api-item.txt {
+      margin-right: 0;
+      order: 1; }
+      .popup.api-progress .api-item.txt h2 {
+        font-size: 20px;
+        margin-top: 0; } }
+
+/*# sourceMappingURL=main.css.map */
